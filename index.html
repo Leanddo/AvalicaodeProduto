@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,38 +10,46 @@
     <main>
       <div id="maincontainer">
         <div id="produto">
-            <button id="back"><img id="backimg" src="img/back.svg"></button>
-          <img src="img/Image.png" />
+            <button id="back" onclick="switchpage(1)"><img src="img/back.svg"></button>
+          <img id="relogio" src="img/Image.png" />
         </div>
         <div id="avaliacao">
-          <div class="review">
-            <!--<div id="reviewstars">
+            <div id="reviewstars">
               <h2>Avalie o produto</h2>
               <p>
                 O que você achou do produto <br />
                 <a href="#">Smartwatch Amazfit Bip U Pro?</a>
               </p>
-              <div id="stars">
-                <button><img src="img/star.svg" /></button>
-                <button><img src="img/star.svg" /></button>
-                <button><img src="img/star.svg" /></button>
-                <button><img src="img/star.svg" /></button>
-                <button><img src="img/star.svg" /></button>
-              </div>
+              <form class="star-rating">
+                <input class="radio-input" type="radio" id="star5" name="star-input" value="5" />
+                <label class="radio-label" class for="star5" title="5 stars">5 stars</label>
+              
+                <input class="radio-input" type="radio" id="star4" name="star-input" value="4" />
+                <label class="radio-label" for="star4" title="4 stars">4 stars</label>
+              
+                <input class="radio-input" type="radio" id="star3" name="star-input" value="3" />
+                <label class="radio-label" for="star3" title="3 stars">3 stars</label>
+              
+                <input class="radio-input" type="radio" id="star2" name="star-input" value="2" />
+                <label class="radio-label" for="star2" title="2 stars">2 stars</label>
+              
+                <input class="radio-input" type="radio" id="star1" name="star-input" value="1" />
+                <label class="radio-label" for="star1" title="1 star">1 star</label>
+              </form>              
               <div id="helpertext">
                 <span>Ruim</span>
                 <span>Ótimo</span>
               </div>
-              <button id="continuar">
+              <button id="continuar" onclick="switchpage(2)">
                 Continuar<img src="img/seta.svg" alt="" />
               </button>
             </div> 
-        -->
-            <div class="review">
+        
+           <div id="review">
               <h2>Deixe um comentário</h2>
               <p>Conte sobre o motivo da sua avaliação</p>
               <textarea id="Textarea" placeholder="Escreva aqui seu comentário"></textarea>
-              <button id="continuar">
+              <button id="enviar" onclick="submit()">
                 Enviar<img src="img/seta.svg" alt="" />
               </button>
             </div>
@@ -49,5 +57,6 @@
         </div>
       </div>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
